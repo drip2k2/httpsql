@@ -26,6 +26,10 @@ components:
       - servicePort: 80
         containerPort: 80
         external: true
+      - servicePort: 8000
+        containerPort: 8000
+        external: false
+        metricsPath: /metrics
     instances: 3
     autoscale:
       max_instances: 5
